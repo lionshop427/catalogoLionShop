@@ -1,0 +1,214 @@
+/* ====== ESTILOS GENERALES ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif ;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+/* ===== IMAGEN DE FONDO ===== */
+body {
+  margin: 0;
+  padding: 0;
+
+  background-image: url("im.png"); /* ← AQUÍ VA TU IMAGEN */
+  background-size: cover;             
+  background-position: center;        
+  background-repeat: no-repeat;       
+  background-attachment: fixed;       
+}
+
+/* ===== CONTENIDO ===== */
+.contenido {
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+
+/* ====== CABECERA ====== */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+header p {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* ====== BARRA SUPERIOR ====== */
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  flex: 1 1 220px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.search-box input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filters select {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+  background: white;
+}
+
+/* ====== SECCIONES POR CATEGORÍA ====== */
+.category-section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.product-title{
+  color: black;
+}
+
+.price{
+  color: black;
+}
+.stock{
+  color: orange ;
+}
+
+/* Fila horizontal que se desliza */
+.product-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.product-row::-webkit-scrollbar {
+  height: 4px;
+}
+.product-row::-webkit-scrollbar-thumb {
+  background: #9e9bb0;
+  border-radius: 999px;
+}
+
+/* ====== TARJETA DE PRODUCTO ====== */
+.product-card {
+  background: rgb(236, 242, 247);
+  border-radius: 14px;
+  padding: 14px 14px 16px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  min-width: 230px;
+  max-width: 230px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.12);
+}
+
+/* Contenedor de imagen preparado para fotos reales */
+.product-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  background: #e5e7eb; /* gris claro de fondo por si no carga la imagen */
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #0b4bd4;
+  background: #dae0e6;
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin-bottom: 4px;
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.product-desc {
+  font-size: 0.85rem;
+  color: rgb(23, 20, 20);
+  margin-bottom: 8px;
+  min-height: 36px;
+}
+
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.85rem;
+}
+
+/* ====== RESPONSIVE PEQUEÑO ====== */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .top-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
