@@ -20,7 +20,7 @@ body {
   margin: 0;
   padding: 0;
 
-  background-image: url("im.png"); /* ← AQUÍ VA TU IMAGEN */
+  background-image: url("imagenes/im.png"); /* ← AQUÍ VA TU IMAGEN */
   background-size: cover;             
   background-position: center;        
   background-repeat: no-repeat;       
@@ -211,4 +211,5 @@ header p {
     align-items: stretch;
   }
 }
+
 
