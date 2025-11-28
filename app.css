@@ -211,5 +211,25 @@ header p {
     align-items: stretch;
   }
 }
+/* ====== video css ====== */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contenedor-videos {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+video {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
 
 
