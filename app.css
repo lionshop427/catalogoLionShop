@@ -238,8 +238,22 @@ header p {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+/* ===== BOTÓN COMPRAR POR WHATSAPP ===== */
+.btn-buy {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: none;
+  background: #10b981;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
 
-
-
-
-
+.btn-buy:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
