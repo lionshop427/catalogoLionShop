@@ -15,17 +15,17 @@
     <!-- BARRA SUPERIOR IMAGEN -->
     <div class="top-bar">
       <div class="search-box">
-        <input type="text" placeholder="Buscar producto" />
+        <input type="text" placeholder="Buscar producto" id="search-input" />
       </div>
       <div class="filters">
-        <select>
-          <option>Todas las categorías</option>
-          <option>Parlantes🎶</option>
-          <option>Linternas🔥</option>
-          <option>Paneles solares 🌞</option>
-          <option>Micrófonos🎤</option>
-          <option>Power Banks🛢</option>
-          <option>Audífonos🎧</option>
+        <select id="category-filter">
+          <option value="todas">Todas las categorías</option>
+          <option value="Parlante">Parlantes🎶</option>
+          <option value="Linterna">Linternas🔥</option>
+          <option value="Energía solar">Paneles solares 🌞</option>
+          <option value="Micrófono">Micrófonos🎤</option>
+          <option value="Power Bank">Power Banks🛢</option>
+          <option value="Audífonos">Audífonos🎧</option>
         </select>
       </div>
     </div>
@@ -652,7 +652,7 @@
           <div class="product-image">
             <img src="imagenes/panel1.jpg" alt="Kit solar con focos">
           </div>
-          <span class="product-tag">Energía Solar</span>
+          <span class="product-tag">Energía solar</span>
           <h3 class="product-title">Kit Solar Con Focos LED Campo</h3>
           <p class="product-desc">Panel, batería y focos para zonas sin energía, para campos, lugares de 15amperios </p>
           <div class="product-meta">
@@ -1416,7 +1416,39 @@
   </div>
 </section>
 
-  <!-- Script de la tienda -->
+  <!-- ✅ FAB DEL CARRITO -->
+  <button class="cart-fab" id="cart-fab">
+    🛒 <span>Carrito (<span id="cart-count">0</span>)</span>
+  </button>
+
+  <!-- ✅ OVERLAY Y PANEL DEL CARRITO -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <aside class="cart-panel" id="cart-panel">
+    <header class="cart-header">
+      <h3>Tu carrito</h3>
+      <button class="cart-close" id="cart-close">✕</button>
+    </header>
+
+    <div class="cart-body">
+      <div id="cart-items" class="cart-items">
+        <!-- Items del carrito se renderizan desde JS -->
+      </div>
+    </div>
+
+    <footer class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total aproximado:</span>
+        <strong id="cart-total">S/ 0.00</strong>
+      </div>
+      <button class="btn-send-cart" id="cart-send">
+        Enviar pedido por WhatsApp
+      </button>
+    </footer>
+  </aside>
+
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>
