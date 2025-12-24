@@ -127,7 +127,7 @@ header p {
 }
 
 .product-row::-webkit-scrollbar {
-  height: 4px;
+  height: 8px;
 }
 .product-row::-webkit-scrollbar-thumb {
   background: #9e9bb0;
@@ -456,3 +456,4 @@ header p {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+
